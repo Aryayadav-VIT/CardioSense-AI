@@ -1,0 +1,118 @@
+/* Container standard across all pages */
+.container-app {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-app {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-app {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Clinical Card Primitives */
+.card-clinical {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.card-clinical-hover {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-clinical-hover:hover {
+  border-color: #CBD5E1;
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Button Classes */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-deep-navy);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-button);
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-navy);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-action-blue);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-button);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-bg);
+  border-color: #CBD5E1;
+  color: var(--color-heading);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--color-action-blue);
+  outline-offset: 2px;
+}
+
+/* Form Input Class */
+.input-clinical {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-heading);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-clinical:focus {
+  outline: none;
+  border-color: var(--color-action-blue);
+  box-shadow: 0 0 0 1px var(--color-action-blue);
+}
+
+.input-clinical::placeholder {
+  color: #94A3B8;
+}

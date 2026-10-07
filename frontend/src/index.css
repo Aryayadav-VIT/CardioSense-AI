@@ -1,0 +1,20 @@
+@import './styles/variables.css';
+@import './styles/components.css';
+@import './styles/globals.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    border: none;
+    background-color: var(--color-bg);
+  }
+}
