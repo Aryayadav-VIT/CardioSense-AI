@@ -108,7 +108,7 @@ export default function ResultsPage() {
   const probPercentage = Math.round(result.risk_probability * 100);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
+    <div className="container-app max-w-4xl py-8 sm:py-12 space-y-8">
       
       {/* Page Header & Minimal System Indicator */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-slate-200 pb-5">

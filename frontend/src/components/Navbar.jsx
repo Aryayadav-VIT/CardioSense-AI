@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
             <div className="w-7 h-7 rounded bg-navy-900 flex items-center justify-center text-white">
-              <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+              <Heart className="w-3.5 h-3.5 text-blue-400 fill-blue-400/30" />
             </div>
             <div className="flex items-center gap-1.5">
               <span className="font-bold text-sm text-navy-900 tracking-tight">CardioSense</span>
@@ -81,31 +81,11 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Action Section: Subtle Model Status & CTA */}
+          {/* Right Action Section: Assess Risk CTA (Demo badge removed per spec) */}
           <div className="hidden sm:flex items-center gap-3">
-            {/* Subtle Status Indicator */}
-            <div
-              className="flex items-center gap-1.5 text-xs text-clinical-muted"
-              title={
-                modelStatus.loaded
-                  ? 'Active scikit-learn soft voting model loaded from backend/model/'
-                  : 'Running in educational demo mode.'
-              }
-            >
-              <span
-                className={`w-2 h-2 rounded-full ${
-                  modelStatus.loaded ? 'bg-emerald-600' : 'bg-amber-500'
-                }`}
-              />
-              <span className="text-[11px] font-medium text-slate-600">
-                {modelStatus.loaded ? 'Trained Model' : 'Demo Mode'}
-              </span>
-            </div>
-
-            {/* Dark Navy CTA Button */}
             <Link
               to="/assess"
-              className="btn-primary text-xs py-1.5 px-3"
+              className="btn-primary text-xs py-1.5 px-3.5 shadow-xs"
             >
               <span>Assess Risk</span>
             </Link>
@@ -128,18 +108,6 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       {isOpen && (
         <div className="lg:hidden border-t border-clinical-border bg-white px-4 pt-3 pb-5 space-y-2 shadow-sm">
-          <div className="flex items-center justify-between py-1.5 px-2.5 bg-slate-50 rounded text-xs text-clinical-muted mb-2">
-            <span>Model Status:</span>
-            <span className="flex items-center gap-1.5 font-medium text-slate-700">
-              <span
-                className={`w-2 h-2 rounded-full ${
-                  modelStatus.loaded ? 'bg-emerald-600' : 'bg-amber-500'
-                }`}
-              />
-              {modelStatus.loaded ? 'Trained Model Active' : 'Demo Mode'}
-            </span>
-          </div>
-
           {navLinks.map((link) => (
             <Link
               key={link.path}

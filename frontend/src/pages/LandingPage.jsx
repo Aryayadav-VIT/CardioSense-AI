@@ -11,6 +11,7 @@ import {
   Heart,
   Scale,
 } from 'lucide-react';
+import variant1Heart from '../assets/variant1_heart.jpg';
 import CardiovascularVisual from '../components/CardiovascularVisual';
 import MedicalDisclaimerBanner from '../components/MedicalDisclaimerBanner';
 import PageHeader from '../components/ui/PageHeader';
@@ -107,7 +108,7 @@ export default function LandingPage() {
                   className="bg-navy-900 hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded-lg shadow-xs transition-all flex items-center justify-center gap-2 text-sm"
                 >
                   <Activity className="w-4 h-4 text-emerald-400" />
-                  <span>Assess Risk</span>
+                  <span>Assess My Risk</span>
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
 
@@ -128,9 +129,40 @@ export default function LandingPage() {
 
             </div>
 
-            {/* Right Hero Column: Restrained Visualization */}
-            <div className="lg:col-span-5 flex justify-center">
-              <CardiovascularVisual />
+            {/* Right Hero Column: Prominent Muted Blue-Gray Anatomical Heart */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="card-clinical p-6 sm:p-7 w-full max-w-md flex flex-col items-center justify-center text-center shadow-sm">
+                
+                {/* Clinical Metadata Header */}
+                <div className="w-full flex items-center justify-between border-b border-slate-100 pb-2.5 mb-4">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-blue-600" />
+                    <span className="text-[11px] font-semibold tracking-wider text-navy-900 uppercase">
+                      Cardiac System Model
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-mono font-medium text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">
+                    N = 70,000 Cohort
+                  </span>
+                </div>
+
+                {/* Prominent Muted Blue-Gray Anatomical Heart Illustration */}
+                <div className="relative w-full aspect-square max-w-[300px] sm:max-w-[320px] flex items-center justify-center py-2">
+                  <img
+                    src={variant1Heart}
+                    alt="Muted blue-gray anatomical heart illustration"
+                    className="w-full h-full object-contain filter contrast-[1.03] select-none"
+                    loading="eager"
+                  />
+                </div>
+
+                {/* Subdued Clinical Footnote */}
+                <div className="w-full mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                  <span className="font-mono">Hemodynamic Feature Vector</span>
+                  <span className="font-medium text-slate-700">10 Indicators</span>
+                </div>
+
+              </div>
             </div>
 
           </div>
@@ -218,6 +250,11 @@ export default function LandingPage() {
               </p>
             </Card>
           ))}
+        </div>
+
+        {/* Live Architecture Pipeline Preview */}
+        <div className="pt-2 flex justify-center">
+          <CardiovascularVisual />
         </div>
       </section>
 

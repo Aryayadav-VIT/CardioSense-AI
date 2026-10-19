@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="space-y-3 md:col-span-1">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-navy-900 flex items-center justify-center text-white">
-                <Heart className="w-4 h-4 text-rose-500 fill-rose-500/20" />
+                <Heart className="w-4 h-4 text-blue-400 fill-blue-400/20" />
               </div>
               <span className="font-bold text-base text-navy-900">CardioSense AI</span>
             </div>
